@@ -20,8 +20,7 @@ This is an API-based backend for an e-commerce platform. It allows users to mana
   - [Cart](#cart)
   - [Orders](#orders)
   - [Order Status (Admin)](#order-status-admin)
-- [Models](#models)
-- [Testing](#testing)
+
   
 ---
 
@@ -57,3 +56,40 @@ This is an API-based backend for an e-commerce platform. It allows users to mana
 5.  Start the server:
     ```bash
       npm start
+
+
+
+# API Endpoints
+
+## Admin
+
+### 1. Admin Signup/Login
+**Endpoint**: `POST /admin/signup`
+**Endpoint**: `POST /admin/login`
+
+
+### 2. user Signup/Login
+**Endpoint**: `POST /users/signup`
+**Endpoint**: `POST /users/login`
+
+### 3. product
+**Endpoint**: `POST /admin/product`
+**Endpoint**: `GET /admin/product`
+**Endpoint**: `put /admin/product/:id`
+**Endpoint**: `DELETE /admin/product/:id`
+
+
+### 4. statusChange
+**Endpoint**: `PUT /admin/update-status/:id`
+
+### 5. Carts
+**Endpoint**: `POST users/carts/add`
+**Endpoint**: `GET users/carts/`
+**Endpoint**: `put users/carts/update/:id`
+**Endpoint**: `DELETE users/carts/remove/:id`
+
+
+### 6. order
+**Endpoint**: `POST users/orders/create`
+**Endpoint**: `GET users/orders/`
+**Endpoint**: `DELETE /users/orders/cancel/:id`
