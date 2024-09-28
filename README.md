@@ -59,7 +59,6 @@ This is an API-based backend for an e-commerce platform. It allows users to mana
 
 # API Endpoints
 
-# API Endpoints
 
 ## Admin
 
