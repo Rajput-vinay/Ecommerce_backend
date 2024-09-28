@@ -59,32 +59,50 @@ This is an API-based backend for an e-commerce platform. It allows users to mana
 
 # API Endpoints
 
+# API Endpoints
+
 ## Admin
 
-### 1. Admin Signup/Login
-- `POST /admin/signup` | `POST /admin/login`
+| Action         | Endpoint               |
+|----------------|------------------------|
+| Admin Signup   | `POST /admin/signup`    |
+| Admin Login    | `POST /admin/login`     |
 
 ## Users
 
-### 2. User Signup/Login
-- `POST /users/signup` | `POST /users/login`
+| Action         | Endpoint               |
+|----------------|------------------------|
+| User Signup    | `POST /users/signup`    |
+| User Login     | `POST /users/login`     |
 
 ## Product
 
-### 3. Product Management
-- `POST /admin/product` | `GET /admin/product` | `PUT /admin/product/:id` | `DELETE /admin/product/:id`
+| Action                | Endpoint                    |
+|-----------------------|-----------------------------|
+| Create Product        | `POST /admin/product`        |
+| Get All Products      | `GET /admin/product`         |
+| Update Product        | `PUT /admin/product/:id`     |
+| Delete Product        | `DELETE /admin/product/:id`  |
 
 ## Status Change
 
-### 4. Status Update
-- `PUT /admin/update-status/:id`
+| Action                | Endpoint                        |
+|-----------------------|---------------------------------|
+| Update Status         | `PUT /admin/update-status/:id`   |
 
 ## Carts
 
-### 5. Cart Management
-- `POST /users/carts/add` | `GET /users/carts/` | `PUT /users/carts/update/:id` | `DELETE /users/carts/remove/:id`
+| Action                | Endpoint                          |
+|-----------------------|-----------------------------------|
+| Add to Cart           | `POST /users/carts/add`           |
+| Get User's Cart       | `GET /users/carts/`               |
+| Update Cart           | `PUT /users/carts/update/:id`     |
+| Remove from Cart      | `DELETE /users/carts/remove/:id`  |
 
 ## Orders
 
-### 6. Order Management
-- `POST /users/orders/create` | `GET /users/orders/` | `DELETE /users/orders/cancel/:id`
+| Action                | Endpoint                           |
+|-----------------------|------------------------------------|
+| Create Order          | `POST /users/orders/create`        |
+| Get User's Orders     | `GET /users/orders/`               |
+| Cancel Order          | `DELETE /users/orders/cancel/:id`  |
