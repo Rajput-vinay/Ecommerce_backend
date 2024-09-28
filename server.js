@@ -1,0 +1,30 @@
+const express = require('express')
+const dotenv = require('dotenv')
+const cors = require('cors')
+const {dbConnect} = require('./database/db')
+const cookieParser = require('cookie-parser')
+const {adminRouter} = require('./Routes/admin.Routes')
+const {userRouter} = require("./Routes/user.Routes")
+const {orderRouter} = require("./Routes/order.Routes")
+const {cartRouter} = require("./Routes/cart.Routes")
+const {productRouter} = require('./Routes/product.Routes')
+const { statusChangeRouter } = require('./Routes/statusChange.Routes')
+const app = express()
+dotenv.config()
+
+app.use(express.json())
+app.use(cors())
+app.use(cookieParser())
+dbConnect()
+const PORT = process.env.PORT || 4000
+
+app.use("/admin", adminRouter)
+app.use("/users",userRouter)
+app.use("/admin/product", productRouter)
+app.use("/users/carts",cartRouter)
+app.use("/users/orders", orderRouter)
+app.use("/admin/update-status", statusChangeRouter)
+
+app.listen(PORT , ()=>{
+    console.log(`server start at ${PORT}`)
+})
