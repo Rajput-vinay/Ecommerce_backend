@@ -57,39 +57,34 @@ This is an API-based backend for an e-commerce platform. It allows users to mana
     ```bash
       npm start
 
-
-
 # API Endpoints
 
 ## Admin
 
 ### 1. Admin Signup/Login
-**Endpoint**: `POST /admin/signup`
-**Endpoint**: `POST /admin/login`
+- `POST /admin/signup` | `POST /admin/login`
 
+## Users
 
-### 2. user Signup/Login
-**Endpoint**: `POST /users/signup`
-**Endpoint**: `POST /users/login`
+### 2. User Signup/Login
+- `POST /users/signup` | `POST /users/login`
 
-### 3. product
-**Endpoint**: `POST /admin/product`
-**Endpoint**: `GET /admin/product`
-**Endpoint**: `put /admin/product/:id`
-**Endpoint**: `DELETE /admin/product/:id`
+## Product
 
+### 3. Product Management
+- `POST /admin/product` | `GET /admin/product` | `PUT /admin/product/:id` | `DELETE /admin/product/:id`
 
-### 4. statusChange
-**Endpoint**: `PUT /admin/update-status/:id`
+## Status Change
 
-### 5. Carts
-**Endpoint**: `POST users/carts/add`
-**Endpoint**: `GET users/carts/`
-**Endpoint**: `put users/carts/update/:id`
-**Endpoint**: `DELETE users/carts/remove/:id`
+### 4. Status Update
+- `PUT /admin/update-status/:id`
 
+## Carts
 
-### 6. order
-**Endpoint**: `POST users/orders/create`
-**Endpoint**: `GET users/orders/`
-**Endpoint**: `DELETE /users/orders/cancel/:id`
+### 5. Cart Management
+- `POST /users/carts/add` | `GET /users/carts/` | `PUT /users/carts/update/:id` | `DELETE /users/carts/remove/:id`
+
+## Orders
+
+### 6. Order Management
+- `POST /users/orders/create` | `GET /users/orders/` | `DELETE /users/orders/cancel/:id`
